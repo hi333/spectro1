@@ -2,7 +2,7 @@
   <block type="oled_cleardisplay" id="225" x="79" y="-31">
     <next>
       <block type="oled_drawtext" id="244">
-        <field name="TEXT">sourya cant dance</field>
+        <field name="TEXT"></field>
         <next>
           <block type="oled_setcursor" id="262" inline="true">
             <value name="STARTX">
