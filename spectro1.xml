@@ -1,9 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="movement_forward" id="225" x="34" y="-74">
     <next>
-      <block type="multimedia_playwav" id="241">
-        <field name="WAV">uohia</field>
+      <block type="robot_delay" id="243" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="250">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
       </block>
     </next>
+  </block>
+  <block type="math_number" id="251" x="-53" y="-51">
+    <field name="NUM">0</field>
   </block>
 </xml>
