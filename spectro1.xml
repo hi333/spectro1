@@ -10,7 +10,7 @@
       <block type="controls_if" id="30" inline="false">
         <value name="IF0">
           <block type="sensor_button" id="44">
-            <field name="OBJECT">UP</field>
+            <field name="OBJECT">ENTER</field>
           </block>
         </value>
         <statement name="DO0">
