@@ -8,224 +8,59 @@
           </block>
         </value>
         <next>
-          <block type="movement_forward" id="300">
+          <block type="movement_stop" id="297">
             <next>
-              <block type="robot_delay" id="298" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="299">
-                    <field name="NUM">5000</field>
-                  </block>
-                </value>
+              <block type="movement_forward" id="300">
                 <next>
-                  <block type="movement_stop" id="297">
+                  <block type="robot_delay" id="298" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="299">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="movement_left" id="291">
+                      <block type="movement_stop" id="304">
                         <next>
-                          <block type="robot_delay" id="294" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="295">
-                                <field name="NUM">2500</field>
-                              </block>
-                            </value>
+                          <block type="movement_forward" id="301">
                             <next>
-                              <block type="movement_stop" id="274">
+                              <block type="robot_delay" id="302" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="303">
+                                    <field name="NUM">5000</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="oled_cleardisplay" id="225">
+                                  <block type="movement_left" id="291">
                                     <next>
-                                      <block type="oled_drawtext" id="244">
-                                        <field name="TEXT">hey nate!</field>
+                                      <block type="robot_delay" id="294" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="295">
+                                            <field name="NUM">2500</field>
+                                          </block>
+                                        </value>
                                         <next>
-                                          <block type="oled_setcursor" id="262" inline="true">
-                                            <value name="STARTX">
-                                              <block type="math_number" id="263">
-                                                <field name="NUM">0</field>
-                                              </block>
-                                            </value>
-                                            <value name="STARTY">
-                                              <block type="math_number" id="264">
-                                                <field name="NUM">10</field>
-                                              </block>
-                                            </value>
+                                          <block type="movement_stop" id="274">
                                             <next>
-                                              <block type="controls_whileUntil" id="32" inline="false">
-                                                <field name="MODE">UNTIL</field>
-                                                <value name="NUMBER">
-                                                  <block type="sensor_button" id="54">
-                                                    <field name="OBJECT">DOWN</field>
-                                                  </block>
-                                                </value>
-                                                <statement name="DO">
-                                                  <block type="oled_cleardisplay" id="163">
+                                              <block type="oled_cleardisplay" id="225">
+                                                <next>
+                                                  <block type="oled_drawtext" id="244">
+                                                    <field name="TEXT">hey nate!</field>
                                                     <next>
-                                                      <block type="oled_drawtext" id="164">
-                                                        <field name="TEXT">blue=</field>
-                                                        <next>
-                                                          <block type="oled_drawnumber" id="165" inline="true">
-                                                            <value name="NUMBER">
-                                                              <block type="sensor_spectrometer" id="166">
-                                                                <field name="LIGHT">BLUE</field>
-                                                              </block>
-                                                            </value>
-                                                            <next>
-                                                              <block type="oled_setcursor" id="167" inline="true">
-                                                                <value name="STARTX">
-                                                                  <block type="math_number" id="168">
-                                                                    <field name="NUM">0</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="STARTY">
-                                                                  <block type="math_number" id="169">
-                                                                    <field name="NUM">10</field>
-                                                                  </block>
-                                                                </value>
-                                                                <next>
-                                                                  <block type="oled_drawtext" id="121">
-                                                                    <field name="TEXT">green=</field>
-                                                                    <next>
-                                                                      <block type="oled_drawnumber" id="140" inline="true">
-                                                                        <value name="NUMBER">
-                                                                          <block type="sensor_spectrometer" id="162">
-                                                                            <field name="LIGHT">GREEN</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <next>
-                                                                          <block type="oled_setcursor" id="97" inline="true">
-                                                                            <value name="STARTX">
-                                                                              <block type="math_number" id="105">
-                                                                                <field name="NUM">0</field>
-                                                                              </block>
-                                                                            </value>
-                                                                            <value name="STARTY">
-                                                                              <block type="math_number" id="106">
-                                                                                <field name="NUM">20</field>
-                                                                              </block>
-                                                                            </value>
-                                                                            <next>
-                                                                              <block type="oled_drawtext" id="174">
-                                                                                <field name="TEXT">yellow=</field>
-                                                                                <next>
-                                                                                  <block type="oled_drawnumber" id="178" inline="true">
-                                                                                    <value name="NUMBER">
-                                                                                      <block type="sensor_spectrometer" id="179">
-                                                                                        <field name="LIGHT">YELLOW</field>
-                                                                                      </block>
-                                                                                    </value>
-                                                                                    <next>
-                                                                                      <block type="oled_setcursor" id="186" inline="true">
-                                                                                        <value name="STARTX">
-                                                                                          <block type="math_number" id="187">
-                                                                                            <field name="NUM">0</field>
-                                                                                          </block>
-                                                                                        </value>
-                                                                                        <value name="STARTY">
-                                                                                          <block type="math_number" id="188">
-                                                                                            <field name="NUM">30</field>
-                                                                                          </block>
-                                                                                        </value>
-                                                                                        <next>
-                                                                                          <block type="oled_drawtext" id="175">
-                                                                                            <field name="TEXT">red=</field>
-                                                                                            <next>
-                                                                                              <block type="oled_drawnumber" id="184" inline="true">
-                                                                                                <value name="NUMBER">
-                                                                                                  <block type="sensor_spectrometer" id="185">
-                                                                                                    <field name="LIGHT">RED</field>
-                                                                                                  </block>
-                                                                                                </value>
-                                                                                                <next>
-                                                                                                  <block type="oled_setcursor" id="192" inline="true">
-                                                                                                    <value name="STARTX">
-                                                                                                      <block type="math_number" id="193">
-                                                                                                        <field name="NUM">0</field>
-                                                                                                      </block>
-                                                                                                    </value>
-                                                                                                    <value name="STARTY">
-                                                                                                      <block type="math_number" id="194">
-                                                                                                        <field name="NUM">40</field>
-                                                                                                      </block>
-                                                                                                    </value>
-                                                                                                    <next>
-                                                                                                      <block type="oled_drawtext" id="177">
-                                                                                                        <field name="TEXT">880nm=</field>
-                                                                                                        <next>
-                                                                                                          <block type="oled_drawnumber" id="180" inline="true">
-                                                                                                            <value name="NUMBER">
-                                                                                                              <block type="sensor_spectrometer" id="181">
-                                                                                                                <field name="LIGHT">IR880</field>
-                                                                                                              </block>
-                                                                                                            </value>
-                                                                                                            <next>
-                                                                                                              <block type="oled_setcursor" id="195" inline="true">
-                                                                                                                <value name="STARTX">
-                                                                                                                  <block type="math_number" id="196">
-                                                                                                                    <field name="NUM">0</field>
-                                                                                                                  </block>
-                                                                                                                </value>
-                                                                                                                <value name="STARTY">
-                                                                                                                  <block type="math_number" id="197">
-                                                                                                                    <field name="NUM">0</field>
-                                                                                                                  </block>
-                                                                                                                </value>
-                                                                                                                <next>
-                                                                                                                  <block type="oled_drawtext" id="176">
-                                                                                                                    <field name="TEXT">940nm=</field>
-                                                                                                                    <next>
-                                                                                                                      <block type="oled_drawnumber" id="182" inline="true">
-                                                                                                                        <value name="NUMBER">
-                                                                                                                          <block type="sensor_spectrometer" id="183">
-                                                                                                                            <field name="LIGHT">IR940</field>
-                                                                                                                          </block>
-                                                                                                                        </value>
-                                                                                                                        <next>
-                                                                                                                          <block type="oled_setcursor" id="189" inline="true">
-                                                                                                                            <value name="STARTX">
-                                                                                                                              <block type="math_number" id="190">
-                                                                                                                                <field name="NUM">0</field>
-                                                                                                                              </block>
-                                                                                                                            </value>
-                                                                                                                            <value name="STARTY">
-                                                                                                                              <block type="math_number" id="191">
-                                                                                                                                <field name="NUM">0</field>
-                                                                                                                              </block>
-                                                                                                                            </value>
-                                                                                                                          </block>
-                                                                                                                        </next>
-                                                                                                                      </block>
-                                                                                                                    </next>
-                                                                                                                  </block>
-                                                                                                                </next>
-                                                                                                              </block>
-                                                                                                            </next>
-                                                                                                          </block>
-                                                                                                        </next>
-                                                                                                      </block>
-                                                                                                    </next>
-                                                                                                  </block>
-                                                                                                </next>
-                                                                                              </block>
-                                                                                            </next>
-                                                                                          </block>
-                                                                                        </next>
-                                                                                      </block>
-                                                                                    </next>
-                                                                                  </block>
-                                                                                </next>
-                                                                              </block>
-                                                                            </next>
-                                                                          </block>
-                                                                        </next>
-                                                                      </block>
-                                                                    </next>
-                                                                  </block>
-                                                                </next>
-                                                              </block>
-                                                            </next>
+                                                      <block type="oled_setcursor" id="262" inline="true">
+                                                        <value name="STARTX">
+                                                          <block type="math_number" id="263">
+                                                            <field name="NUM">0</field>
                                                           </block>
-                                                        </next>
+                                                        </value>
+                                                        <value name="STARTY">
+                                                          <block type="math_number" id="264">
+                                                            <field name="NUM">10</field>
+                                                          </block>
+                                                        </value>
                                                       </block>
                                                     </next>
                                                   </block>
-                                                </statement>
+                                                </next>
                                               </block>
                                             </next>
                                           </block>
